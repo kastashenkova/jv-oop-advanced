@@ -1,21 +1,21 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements Behavior {
+public class Rectangle extends Figure {
     private int height;
-    private int sideBelowHeight;
+    private int width;
 
-    public Rectangle(String color, int height, int sideBelowHeight) {
+    public Rectangle(String color, int height, int width) {
         super(color);
         this.height = height;
-        this.sideBelowHeight = sideBelowHeight;
+        this.width = width;
     }
 
-    public int getSideBelowHeight() {
-        return sideBelowHeight;
+    public int getWidth() {
+        return width;
     }
 
-    public void setSideBelowHeight(int sideBelowHeight) {
-        this.sideBelowHeight = sideBelowHeight;
+    public void setWidth(int width) {
+        this.width = width;
     }
 
     public int getHeight() {
@@ -28,14 +28,14 @@ public class Rectangle extends Figure implements Behavior {
 
     @Override
     public double area() {
-        return (double) (height * sideBelowHeight) / 2;
+        return height * width;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: rectangle, area: "
                 + area() + " sq. units, height: " + height
-                + ", side below height: " + sideBelowHeight
+                + ", side below height: " + width
                 + " units, color: " + getColor());
     }
 }
