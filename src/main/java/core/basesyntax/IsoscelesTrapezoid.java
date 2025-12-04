@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure {
+public class IsoscelesTrapezoid extends Figure implements AreaCalculator, Drawable {
     private int median;
     private int height;
 
@@ -28,7 +28,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public double area() {
-        return (double) (height * median) / 2;
+        return median * height;
     }
 
     @Override
