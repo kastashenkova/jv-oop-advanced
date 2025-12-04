@@ -33,6 +33,9 @@ public class Rectangle extends Figure implements Behavior {
 
     @Override
     public void draw() {
-        System.out.println("Figure: rectangle, area: " + area() + " sq. units, height: " + height + ", side below height: " + sideBelowHeight + " units, color: " + getColor());
+        System.out.println("Figure: rectangle, area: "
+                + area() + " sq. units, height: " + height
+                + ", side below height: " + sideBelowHeight
+                + " units, color: " + getColor());
     }
 }
